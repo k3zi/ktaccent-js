@@ -1,0 +1,32 @@
+{
+  "name": "ktaccent",
+  "version": "1.0.0",
+  "description": "アクセントを推測しようとするライブラリ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3zi/ktaccent.git"
+  },
+  "author": "kezi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k3zi/ktaccent/issues"
+  },
+  "homepage": "https://github.com/k3zi/ktaccent#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5"
+  },
+  "dependencies": {
+    "cached-request": "^1.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "glob": "^7.1.2",
+    "mecab-async": "^0.1.2",
+    "moji": "^0.5.1",
+    "path": "^0.12.7",
+    "request": "^2.85.0"
+  }
+}
