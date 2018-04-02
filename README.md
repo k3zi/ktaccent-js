@@ -1,4 +1,4 @@
-# ktaccent ([日本語版](#ktaccent-アクセントを推測しようとするライブラリ))
+# ktaccent ([日本語版](#ktaccent))
 [![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent)
 
 ## Overview
@@ -40,6 +40,6 @@ ktaccent.parse(string, function (result) {
 });
 ```
 
-## やることリスト:
+## やることリスト
 * テストをフォルダに分ける
 * ライブラリを広げる：一定のペースで
