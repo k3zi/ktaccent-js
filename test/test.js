@@ -86,6 +86,60 @@ describe('exports', function () {
             });
         });
 
+
+        describe('when dealing with い-adjectives', function () {
+            describe('〜い', function () {
+                var basicAccentTests = {
+                    'いい': 'イ＼イ', // MeCab is returning イイ for pronunciation
+                    '高い': 'タカ＼イ',
+                    '大きい': 'オーキ＼イ',
+                    '甘い': 'アマイ',
+                    '赤い': 'アカイ',
+                    '青い': 'アオ＼イ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜かった', function () {
+                var basicAccentTests = {
+                    'よかった': 'ヨ＼カッタ', // MeCab is returning イイ for pronunciation
+                    '高かった': 'タカ＼カッタ',
+                    '大きかった': 'オーキ＼カッタ',
+                    '厚かった': 'アツ＼カッタ',
+                    '青かった': 'ア＼オカッタ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜く', function () {
+                var basicAccentTests = {
+                    'よく': 'ヨ＼ク', // MeCab is returning イイ for pronunciation
+                    '高く': 'タカ＼ク',
+                    '大きく': 'オーキ＼ク',
+                    '厚く': 'アツク',
+                    '赤く': 'アカク',
+                    '青く': 'ア＼オク',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜くない', function () {
+                var basicAccentTests = {
+                    'よくない': 'ヨ＼クナ＼イ', // MeCab is returning イイ for pronunciation
+                    '高くない': 'タカ＼クナ＼イ',
+                    '大きくない': 'オーキ＼クナ＼イ',
+                    '厚くない': 'アツクナ＼イ',
+                    '赤くない': 'アカクナ＼イ',
+                    '青くない': 'ア＼オクナ＼イ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+        });
+
         describe('with conversations', function () {
             var basicAccentTests = {
                 'わかりますか': 'ワカリマ＼スカ',
