@@ -62,6 +62,28 @@ describe('exports', function () {
 
                 checkSet(basicAccentTests);
             });
+
+            describe('〜ません', function () {
+                var basicAccentTests = {
+                    'わかりません': 'ワカリマセ＼ン',
+                    'しません': 'シマセ＼ン',
+                    '違いません': 'チガイマセ＼ン',
+                    '来ません': 'キマセ＼ン',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜ませんでした', function () {
+                var basicAccentTests = {
+                    'わかりませんでした': 'ワカリマセ＼ンデシタ',
+                    '作りませんでした': 'ツクリマセ＼ンデシタ',
+                    'できませんでした': 'デキマセ＼ンデシタ',
+                    '行きませんでした': 'イキマセ＼ンデシタ',
+                };
+
+                checkSet(basicAccentTests);
+            });
         });
 
         describe('with conversations', function () {
