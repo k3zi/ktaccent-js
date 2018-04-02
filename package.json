@@ -2,7 +2,7 @@
   "name": "ktaccent",
   "version": "1.0.0",
   "description": "アクセントを推測しようとするライブラリ",
-  "main": "index.js",
+  "main": "lib/ktaccent.js",
   "scripts": {
     "test": "mocha test/test.js"
   },
