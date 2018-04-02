@@ -140,7 +140,7 @@ describe('exports', function () {
             });
         });
 
-        describe('with conversations', function () {
+        describe('with random sentences', function () {
             var basicAccentTests = {
                 'わかりますか': 'ワカリマ＼スカ',
                 // skip: 'ええ、わかります': 'エ＼ー、ワカリマ＼ス',
@@ -160,21 +160,19 @@ describe('exports', function () {
                 'すみません。わかりませんでした': 'スミマセ＼ン。ワカリマセ＼ンデシタ',
                 'わかりませんでしたか': 'ワカリマセ＼ンデシタカ',
                 'ええ。どうもすみません': 'エ＼ー。ド＼ーモスミマセ＼ン',
+
+                'いいですか': 'イ＼イデスカ',
+                'いいですよ': 'イ＼イデスヨ',
+
+                'とても面白いですよ。しませんか': 'トテモオモシロ＼イデスヨ。シマセ＼ンカ',
+                // actually sounds like: アリ＼ガトウゴザイマス
+                'ありがとうございます': 'アリ＼ガトーゴザイマ＼ス',
+
+                '買いましたか': 'カイマ＼シタカ',
+                'ええ。高かったですよ': 'エ＼ー。タカ＼カッタデスヨ',
             };
 
             checkSet(basicAccentTests);
         });
-
-        /*it('should find the screen span', function () {
-            expect(this.calculator.display.getAttribute('id')).to.equal('screen');
-        });
-
-        it('should have correct properties', function () {
-            expect(this.calculator.display.innerHTML).to.equal('0');
-            expect(this.calculator.memNum).to.equal('0');
-            expect(this.calculator.lastNum).to.be.a('null')
-            expect(this.calculator.currentNumString).to.equal('');
-            expect(this.calculator.lastOperator).to.be.an('undefined')
-        });*/
     });
 });
