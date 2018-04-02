@@ -1,5 +1,8 @@
-# ktaccent: A library for guessing sentence pitch accent ([日本語版](#ktaccent-アクセントを推測しようとするライブラリ))
+# ktaccent ([日本語版](#ktaccent-アクセントを推測しようとするライブラリ))
 [![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent)
+
+## Overview
+A library for guessing sentence pitch accent
 
 ## Prerequisites
 1) MeCab
@@ -19,8 +22,11 @@ ktaccent.parse(string, function (result) {
 
 ---
 
-# ktaccent: アクセントを推測しようとするライブラリ
+# ktaccent
 [![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent)
+
+## ktaccentとは？
+アクセントを推測するライブラリで、ktaccentは高低アクセントのことです
 
 ## 動作に必要なもの
 1) MeCab
