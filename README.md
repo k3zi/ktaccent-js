@@ -1,5 +1,5 @@
 # ktaccent ([日本語版](#ktaccent))
-[![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent)
+[![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent) [![Coverage](https://img.shields.io/codecov/c/github/k3zi/ktaccent/master.svg?style=flat-square)](https://codecov.io/gh/k3zi/ktaccent)
 
 ## Overview
 A library for guessing sentence pitch accent
@@ -23,7 +23,7 @@ ktaccent.parse(string, function (result) {
 ---
 
 # ktaccent
-[![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent)
+[![Build Status](https://img.shields.io/travis/k3zi/ktaccent/master.svg?style=flat-square)](https://travis-ci.org/k3zi/ktaccent) [![Coverage](https://img.shields.io/codecov/c/github/k3zi/ktaccent/master.svg?style=flat-square)](https://codecov.io/gh/k3zi/ktaccent)
 
 ## ktaccentとは？
 アクセントを推測するライブラリで、ktaccentは高低アクセントのことです
