@@ -105,7 +105,7 @@ describe('exports', function () {
 
             describe('〜かった', function () {
                 var basicAccentTests = {
-                    'よかった': 'ヨ＼カッタ', // MeCab is returning イイ for pronunciation
+                    'よかった': 'ヨ＼カッタ',
                     '高かった': 'タカ＼カッタ',
                     '大きかった': 'オーキ＼カッタ',
                     '厚かった': 'アツ＼カッタ',
@@ -117,7 +117,7 @@ describe('exports', function () {
 
             describe('〜く', function () {
                 var basicAccentTests = {
-                    'よく': 'ヨ＼ク', // MeCab is returning イイ for pronunciation
+                    'よく': 'ヨ＼ク',
                     '高く': 'タカ＼ク',
                     '大きく': 'オーキ＼ク',
                     '厚く': 'アツク',
@@ -130,12 +130,66 @@ describe('exports', function () {
 
             describe('〜くない', function () {
                 var basicAccentTests = {
-                    'よくない': 'ヨ＼クナ＼イ', // MeCab is returning イイ for pronunciation
+                    'よくない': 'ヨ＼クナ＼イ',
                     '高くない': 'タカ＼クナ＼イ',
                     '大きくない': 'オーキ＼クナ＼イ',
                     '厚くない': 'アツクナ＼イ',
                     '赤くない': 'アカクナ＼イ',
                     '青くない': 'ア＼オクナ＼イ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+        });
+
+        describe('when dealing with ichidan verbs', function () {
+            describe('〜る', function () {
+                var basicAccentTests = {
+                    '食べる': 'タベ＼ル',
+                    '付ける': 'ツケ＼ル',
+                    '閉める': 'シメ＼ル',
+                    '上げる': 'アゲル',
+                    '見る': 'ミ＼ル',
+                    '数える': 'カゾエ＼ル',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜て', function () {
+                var basicAccentTests = {
+                    '食べて': 'タ＼ベテ',
+                    // '付けて': 'ツケ＼テ', // Add fix for voicless vowels
+                    '閉めて': 'シ＼メテ',
+                    '上げて': 'アゲテ',
+                    '見て': 'ミ＼テ',
+                    '数えて': 'カゾ＼エテ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜たら', function () {
+                var basicAccentTests = {
+                    '食べたら': 'タ＼ベタラ',
+                    // '付けて': 'ツケ＼テ', // Add fix for voicless vowels
+                    '閉めたら': 'シ＼メタラ',
+                    // '上げて': 'アゲタイ', // this can
+                    '見たら': 'ミ＼タラ',
+                    '数えたら': 'カゾ＼エタラ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+        });
+
+        describe('when dealing with the extended predicate', function () {
+            describe('〜んだ', function () {
+                var basicAccentTests = {
+                    'いいんだ': 'イ＼インダ', // MeCab is returning イイ for pronunciation
+                    '赤いんだ': 'アカ＼インダ',
+                    '青いんだ': 'アオ＼インダ',
+                    '食べるんだ': 'タベ＼ルンダ',
                 };
 
                 checkSet(basicAccentTests);
