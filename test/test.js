@@ -23,6 +23,7 @@ describe('exports', function () {
                     '橋です': 'ハシ＼デス',
                     // skip: '本です': 'ホ＼ンデス',
                     '本当です': 'ホントーデ＼ス',
+                    'お小遣いです': 'オコ＼ズカイデス',
                 };
 
                 checkSet(basicAccentTests);
@@ -34,6 +35,7 @@ describe('exports', function () {
                     '橋だ': 'ハシ＼ダ',
                     // skip: '本だ': 'ホ＼ンダ',
                     '本当だ': 'ホントーダ',
+                    'お小遣いだ': 'オコ＼ズカイダ',
                 };
 
                 checkSet(basicAccentTests);
