@@ -151,6 +151,7 @@ describe('exports', function () {
                     '上げる': 'アゲル',
                     '見る': 'ミ＼ル',
                     '数える': 'カゾエ＼ル',
+                    '存じる': 'ゾンジ＼ル',
                 };
 
                 checkSet(basicAccentTests);
@@ -159,11 +160,12 @@ describe('exports', function () {
             describe('〜て', function () {
                 var basicAccentTests = {
                     '食べて': 'タ＼ベテ',
-                    // '付けて': 'ツケ＼テ', // Add fix for voicless vowels
+                    '付けて': 'ツケ＼テ',
                     '閉めて': 'シ＼メテ',
                     '上げて': 'アゲテ',
                     '見て': 'ミ＼テ',
                     '数えて': 'カゾ＼エテ',
+                    '存じて': 'ゾ＼ンジテ',
                 };
 
                 checkSet(basicAccentTests);
@@ -172,11 +174,12 @@ describe('exports', function () {
             describe('〜たら', function () {
                 var basicAccentTests = {
                     '食べたら': 'タ＼ベタラ',
-                    // '付けて': 'ツケ＼テ', // Add fix for voicless vowels
+                    '付けたら': 'ツケ＼タラ',
                     '閉めたら': 'シ＼メタラ',
-                    // '上げて': 'アゲタイ', // this can
+                    '上げたら': 'アゲタ＼ラ',
                     '見たら': 'ミ＼タラ',
                     '数えたら': 'カゾ＼エタラ',
+                    '存じたら': 'ゾ＼ンジタラ',
                 };
 
                 checkSet(basicAccentTests);
