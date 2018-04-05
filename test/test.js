@@ -17,7 +17,7 @@ function checkSet(tests) {
 describe('exports', function () {
     describe('#parse(:string)', function () {
         describe('when dealing with だ', function () {
-            describe('です', function () {
+            describe('〜です', function () {
                 var basicAccentTests = {
                     '箸です': 'ハ＼シデス',
                     '橋です': 'ハシ＼デス',
@@ -29,13 +29,49 @@ describe('exports', function () {
                 checkSet(basicAccentTests);
             });
 
-            describe('だ', function () {
+            describe('〜だ', function () {
                 var basicAccentTests = {
                     '箸だ': 'ハ＼シダ',
                     '橋だ': 'ハシ＼ダ',
                     // skip: '本だ': 'ホ＼ンダ',
                     '本当だ': 'ホントーダ',
                     'お小遣いだ': 'オコ＼ズカイダ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜じゃありません', function () {
+                var basicAccentTests = {
+                    '箸じゃありません': 'ハ＼シジャアリマセ＼ン',
+                    '橋じゃありません': 'ハシ＼ジャアリマセ＼ン',
+                    // skip: '本だ': 'ホ＼ンダ',
+                    '本当じゃありません': 'ホントージャアリマセ＼ン',
+                    'お小遣いじゃありません': 'オコ＼ズカイジャアリマセ＼ン',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜じゃない', function () {
+                var basicAccentTests = {
+                    '箸じゃない': 'ハ＼シジャナ＼イ',
+                    '橋じゃない': 'ハシ＼ジャナ＼イ',
+                    // skip: '本だ': 'ホ＼ンダ',
+                    '本当じゃない': 'ホントージャナ＼イ',
+                    'お小遣いじゃない': 'オコ＼ズカイジャナ＼イ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜じゃなかった', function () {
+                var basicAccentTests = {
+                    '箸じゃなかった': 'ハ＼シジャナ＼カッタ',
+                    '橋じゃなかった': 'ハシ＼ジャナ＼カッタ',
+                    // skip: '本だ': 'ホ＼ンダ',
+                    '本当じゃなかった': 'ホントージャナ＼カッタ',
+                    'お小遣いじゃなかった': 'オコ＼ズカイジャナ＼カッタ',
                 };
 
                 checkSet(basicAccentTests);
@@ -140,6 +176,19 @@ describe('exports', function () {
 
                 checkSet(basicAccentTests);
             });
+
+            describe('〜くありません', function () {
+                var basicAccentTests = {
+                    'よくありません': 'ヨ＼クアリマセ＼ン',
+                    '高くありません': 'タカ＼クアリマセ＼ン',
+                    '大きくありません': 'オーキ＼クアリマセ＼ン',
+                    '厚くありません': 'アツクアリマセ＼ン',
+                    '赤くありません': 'アカクアリマセ＼ン',
+                    '青くありません': 'ア＼オクアリマセ＼ン',
+                };
+
+                checkSet(basicAccentTests);
+            });
         });
 
         describe('when dealing with ichidan verbs', function () {
@@ -152,6 +201,48 @@ describe('exports', function () {
                     '見る': 'ミ＼ル',
                     '数える': 'カゾエ＼ル',
                     '存じる': 'ゾンジ＼ル',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜ない', function () {
+                var basicAccentTests = {
+                    '食べない': 'タベ＼ナイ',
+                    '付けない': 'ツケ＼ナイ',
+                    '閉めない': 'シメ＼ナイ',
+                    '上げない': 'アゲナイ',
+                    '見ない': 'ミ＼ナイ',
+                    '数えない': 'カゾエ＼ナイ',
+                    '存じない': 'ゾンジ＼ナイ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜なく', function () {
+                var basicAccentTests = {
+                    '食べなく': 'タベ＼ナク',
+                    '付けなく': 'ツケ＼ナク',
+                    '閉めなく': 'シメ＼ナク',
+                    '上げなく': 'アゲナク',
+                    '見なく': 'ミ＼ナク',
+                    '数えなく': 'カゾエ＼ナク',
+                    '存じなく': 'ゾンジ＼ナク',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('〜なかった', function () {
+                var basicAccentTests = {
+                    '食べなかった': 'タベ＼ナカッタ',
+                    '付けなかった': 'ツケ＼ナカッタ',
+                    '閉めなかった': 'シメ＼ナカッタ',
+                    '上げなかった': 'アゲナ＼カッタ',
+                    '見なかった': 'ミ＼ナカッタ',
+                    '数えなかった': 'カゾエ＼ナカッタ',
+                    '存じなかった': 'ゾンジ＼ナカッタ',
                 };
 
                 checkSet(basicAccentTests);
@@ -202,7 +293,7 @@ describe('exports', function () {
         describe('with random sentences', function () {
             var basicAccentTests = {
                 'わかりますか': 'ワカリマ＼スカ',
-                // skip: 'ええ、わかります': 'エ＼ー、ワカリマ＼ス',
+                'ええ、わかります': 'エ＼ー、ワカリマ＼ス',
 
                 '今日しますね': 'キョ＼ーシマ＼スネ',
                 'いや、違います。明日しますよ': 'イヤ、チガイマ＼ス。アシタシマ＼スヨ',
@@ -234,7 +325,7 @@ describe('exports', function () {
                 'ええ。高かったですよ': 'エ＼ー。タカ＼カッタデスヨ',
 
                 'あまり面白くなかったですねえ': 'アマリオモシロ＼クナ＼カッタデスネ＼ー',
-                // 'ええ、つまらなかったですねえ': 'エ＼ー、ツマラ＼ナカッタデスネ＼ー',
+                'ええ、つまらなかったですねえ': 'エ＼ー、ツマラ＼ナカッタデスネ＼ー',
 
                 'よくできました': 'ヨ＼クデキマ＼シタ',
                 'いえいえ、どういたしまして': 'イエ＼イエ、ド＼ーイタシマシテ',
@@ -246,6 +337,14 @@ describe('exports', function () {
                 '何ですか': 'ナ＼ンデスカ',
                 'お電話です': 'オデ＼ンワデス',
                 'あ、どうも': 'ア、ド＼ーモ',
+
+                'だめでしたねえ': 'ダメ＼デシタネ＼ー',
+
+                '日本語じゃありませんよ': 'ニホンゴジャアリマセ＼ンヨ',
+
+                'あ、そうですか': 'ア、ソ＼ーデスカ',
+
+                'はい、鈴木です。どうぞ': 'ハ＼イ、スズキデ＼ス。ド＼ーゾ',
             };
 
             checkSet(basicAccentTests);
