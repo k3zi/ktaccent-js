@@ -277,6 +277,104 @@ describe('exports', function () {
             });
         });
 
+        describe('when dealing with numbers', function () {
+            describe('1-10 numbers', function () {
+                var basicAccentTests = {
+                    '１': 'イチ＼',
+                    '２': 'ニ＼',
+                    '５': 'ゴ＼',
+                    '１０': 'ジュ＼ー',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('11- numbers', function () {
+                var basicAccentTests = {
+                    '１５': 'ジュ＼ーゴ',
+                    '１３': 'ジュ＼ーサン',
+                    '６０': 'ロクジュ＼ー',
+                    '５４５': 'ゴヒャクヨ＼ンジューゴ＼',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('Counter: 〜円', function () {
+                var basicAccentTests = {
+                    '１円': 'イチエン',
+                    '２円': 'ニエン',
+                    '５円': 'ゴ＼エン',
+                    '１０円': 'ジューエン',
+                    '５０円': 'ゴジュ＼ーエン',
+                    '１００円': 'ヒャクエン',
+                    '１０００円': 'センエン',
+                    '１００００円': 'イチマンエン',
+                    '何円': 'ナ＼ンエン',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('Counter: 〜名', function () {
+                var basicAccentTests = {
+                    '１名': 'イチ＼メー',
+                    '２名': 'ニ＼メー',
+                    '４名': 'ヨ＼ンメー',
+                    '１４名': 'ジューヨ＼ンメー',
+                    '５０名': 'ゴジュ＼ーメー',
+                    '１００名': 'ヒャク＼メー',
+                    '１０００名': 'セ＼ンメー',
+                    '１００００名': 'イチマ＼ンメー',
+                    '何名': 'ナ＼ンメー',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('Counter: 〜歳', function () {
+                var basicAccentTests = {
+                    '１歳': 'イ＼ッサイ',
+                    '２歳': 'ニ＼サイ',
+                    '４歳': 'ヨ＼ンサイ',
+                    '１８歳': 'ジューハ＼ッサイ',
+                    '２０歳': 'ハ＼タチ',
+                    '３０歳': 'サンジュ＼ッサイ',
+                    '何歳': 'ナ＼ンサイ',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('Counter: 〜週', function () {
+                var basicAccentTests = {
+                    '１週': 'イッシュー',
+                    '２週': 'ニシュー',
+                    '４週': 'ヨンシュー',
+                    '１８週': 'ジューハッシュー',
+                    '２０週': 'ニジュッシュー',
+                    '３０週': 'サンジュッシュー',
+                    '何週': 'ナンシュー',
+                };
+
+                checkSet(basicAccentTests);
+            });
+
+            describe('Counter: 〜週間', function () {
+                var basicAccentTests = {
+                    '１週間': 'イッシュ＼ーカン',
+                    '２週間': 'ニシュ＼ーカン',
+                    '４週間': 'ヨンシュ＼ーカン',
+                    '１８週間': 'ジューハッシュ＼ーカン',
+                    '２０週間': 'ニジュッシュ＼ーカン',
+                    '３０週間': 'サンジュッシュ＼ーカン',
+                    '何週間': 'ナンシュ＼ーカン',
+                };
+
+                checkSet(basicAccentTests);
+            });
+        });
+
         describe('when dealing with the extended predicate', function () {
             describe('〜んだ', function () {
                 var basicAccentTests = {
