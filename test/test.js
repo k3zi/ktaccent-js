@@ -373,6 +373,20 @@ describe('exports', function () {
 
                 checkSet(basicAccentTests);
             });
+
+            describe('Counter: 〜日', function () {
+                var basicAccentTests = {
+                    '１日': 'イチニチ＼',
+                    '２日': 'フツカ',
+                    '４日': 'ヨッカ',
+                    '１８日': 'ジューハチ＼ニチ',
+                    '２０日': 'ハツカ',
+                    '２４日': 'ニ＼ジューヨッカ',
+                    '何日': 'ナ＼ンニチ',
+                };
+
+                checkSet(basicAccentTests);
+            });
         });
 
         describe('when dealing with the extended predicate', function () {
