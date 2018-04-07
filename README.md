@@ -12,7 +12,7 @@ A library for guessing sentence pitch accent
 ```
 var string = '明日作りますよ';
 ktaccent.parse(string, function (result) {
-    console.log(result); // result: アシタツクリマ＼スヨ
+    console.log(result); // result: アシタ　ツクリマ＼ス　ヨ
 });
 ```
 
