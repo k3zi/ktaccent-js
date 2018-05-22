@@ -11,3 +11,7 @@ script:
   - npm install
   - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
   - codecov
+ addons:
+    apt:
+      update: true
+      
