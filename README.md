@@ -31,7 +31,7 @@ ktaccent.parse(string, function (result) {
 
 # ktaccent
 [![Build Status][travis-image]][travis-url]
-[![Coverage][coverage-image]](coverage-url)
+[![Coverage][coverage-image]][coverage-url]
 [![License][license-image]][license-url]
 
 ## ktaccentとは？
