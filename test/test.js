@@ -6,8 +6,11 @@ function checkSet(tests) {
     for (let [key, value] of Object.entries(tests)) {
         it(`:string = ${key} (${value})`, function (done) {
             this.timeout(30 * 1000);
-            ktaccent.parse(key, function (result) {
+            ktaccent.parse(key, function (result, words) {
                 expect(result).to.equal(value);
+                words.forEach(x => {
+                    console.log(x.kanji, '\n------------------------------\n', x.notes.map((y, i) => `${i + 1}. ${y.tag} ： ${y.info}`).join('\n'), '\n\n');
+                });
                 done();
             });
         });
@@ -416,7 +419,7 @@ describe('exports', function () {
             });
         });
 
-        describe('with random sentences', function () {
+        describe.only('with random sentences', function () {
             var basicAccentTests = {
                 'わかりますか': 'ワカリマ＼ス　カ',
                 'ええ、わかります': 'エ＼ー、ワカリマ＼ス',
@@ -471,6 +474,8 @@ describe('exports', function () {
                 'あ、そうですか': 'ア、ソ＼ー　デス　カ',
 
                 'はい、鈴木です。どうぞ': 'ハ＼イ、スズキ　デ＼ス。ド＼ーゾ',
+
+                '結婚する前は、アメリカでしたけど結婚してからは、東京です。': ''
             };
 
             checkSet(basicAccentTests);
