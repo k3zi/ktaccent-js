@@ -4,6 +4,7 @@ node_js:
   - "8"
   - "7"
 before_script:
+  - sudo apt-get update
   - sudo apt install mecab libmecab-dev mecab-ipadic-utf8
 install:
   - npm install -g codecov istanbul
@@ -11,7 +12,3 @@ script:
   - npm install
   - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
   - codecov
- addons:
-    apt:
-      update: true
-      
